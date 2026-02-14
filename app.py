@@ -57,9 +57,11 @@ if not st.session_state.data.empty:
 
     csv = st.session_state.data.to_csv(index=False).encode("utf-8")
 
-    st.download_button(
-        "📥 Tải Excel",
-        csv,
-        "baocao.csv",
-        "text/csv"i
-    )
+    csv = st.session_state.data.to_csv(index=False)
+
+st.download_button(
+    label="📥 Tải file CSV",
+    data=csv,
+    file_name="bao_cao.csv",
+    mime="text/csv"
+)
