@@ -59,6 +59,10 @@ if not st.session_state.data.empty:
 
     csv = st.session_state.data.to_csv(index=False)
 
+# tạo file csv từ dataframe
+csv = st.session_state.data.to_csv(index=False)
+
+# nút download
 st.download_button(
     label="📥 Tải file CSV",
     data=csv,
